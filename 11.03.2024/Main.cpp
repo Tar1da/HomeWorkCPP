@@ -4,6 +4,6 @@
 
 int main()
 {
-    PixelDrawing PD;
+    PixelDrawing PD(10);
     PD.run();
 }

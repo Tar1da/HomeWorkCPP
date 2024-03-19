@@ -1,13 +1,14 @@
 #include "PixelDrawing.h"
+#define sizeWin(a) a * 100
 
-PixelDrawing::PixelDrawing() :
-	window(sf::VideoMode(1000, 1000), "Pixel Drawing Program")
+PixelDrawing::PixelDrawing(int pixels) :
+	window(sf::VideoMode(sizeWin(pixels), sizeWin(pixels)), "Pixel Drawing Program")
 {
-	for (int i = 0; i < 10; i++) {
-		for (int j = 0; j < 10; j++) {
+	for (int i = 0; i < pixels; i++) {
+		for (int j = 0; j < pixels; j++) {
 			sf::Color setColor = sf::Color::White;
 			fieldOfPixels.push_back(
-				Pixel(sf::Vector2f(98, 98),
+				Pixel(sf::Vector2f(100, 100),
 					setColor,
 					sf::Vector2f(j * 100, i * 100))
 			);
